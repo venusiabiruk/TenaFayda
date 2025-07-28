@@ -27,6 +27,60 @@ Unique Identification: Ensures that every citizen — regardless of age, literac
 Personalized Services: Health messages, appointments, and follow-ups are tailored based on data linked to the individual’s Fayda ID.
 Authentication & Trust: Reduces fraud and duplication, especially in services like vaccinations or child health tracking.
 Inclusivity: Since Fayda registration is open to all age groups, children and elderly citizens — often left out of digital solutions — are included.
+
+
+tech used:
+USSD (Unstructured Supplementary Service Data)
+
+Enables interaction via basic phones (no internet required)
+
+Partnered with Ethio Telecom
+
+SMS Gateway
+
+For confirmation messages, appointment reminders
+
+Service: Africa's Talking or Twilio (local routing)
+
+Identity Integration
+Fayda ID API (via NIDP)
+
+For secure user verification (age, location, health records linking)
+
+ Backend Infrastructure
+Node.js with Express.js (Lightweight & scalable)
+
+Handles USSD requests, routes, logic
+
+MongoDB (Flexible NoSQL DB for patient/session data)
+
+Stores patient interactions, appointments, symptom records
+
+Redis (for session caching of USSD inputs)
+
+Stores temporary USSD interaction steps (multi-step menus)
+
+ Decision Support (Health logic)
+Rule-Based Engine (custom-built)
+
+Encodes basic triage logic (e.g., fever + cough + fatigue → refer to health post)
+
+(Optional) AI Chat Layer – if future expansion to smartphones
+
+E.g., Dialogflow or OpenAI API for natural language triage
+
+🔧 Admin & Health Worker Panel
+React.js or Next.js
+
+Web dashboard for healthcare workers to monitor usage, referrals
+
+Tailwind CSS
+
+Fast, responsive UI styling
+
+Firebase Authentication or Auth0
+
+Login for health workers/admin
  
 
 
